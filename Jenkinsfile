@@ -30,7 +30,7 @@ stages{
                       // bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem 'D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war' ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                         // bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                         // bat "pscp -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem '**/target/*.war' ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
-                        bat "pscp -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
