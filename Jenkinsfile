@@ -9,7 +9,7 @@ pipeline {
     }
 
     triggers {
-         pollSCM('* * * * *') // Polling Source Control
+         pollSCM('H * * * *') // Polling Source Control
      }
 
 stages{
