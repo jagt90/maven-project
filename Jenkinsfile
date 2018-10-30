@@ -35,7 +35,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "echo y | pscp -i ${ec2_key} \"${project}/target/webapp.war\" ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i ${ec2_key} \"${project}/target/webapp.war\" ec2-user@${params.tomcat_prod}:/home/ec2-user"
                     }
                 }
             }
