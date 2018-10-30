@@ -27,7 +27,8 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                      bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@54.88.236.232:/var/lib/tomcat7/webapps"
+                        // bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem \"D:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war\" ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                         // bat "C:/Windows/System32/OpenSSH/scp.exe -i D:/Documents/PERSONAL/CURSOS/Jenkins/tomcat-demo.pem '**/target/*.war' ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
